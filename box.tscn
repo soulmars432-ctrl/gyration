@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dw0jslvmikcd6"]
+
+[ext_resource type="Texture2D" uid="uid://cy2vu8k51f2fu" path="res://Wall assets/Boulder.png" id="1_g2tbl"]
+[ext_resource type="Script" uid="uid://dhqt4oib0dfkv" path="res://box.gd" id="1_oq5cr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oq5cr"]
+size = Vector2(62, 62)
+
+[node name="box" type="CharacterBody2D" unique_id=405040134 groups=["chars"]]
+script = ExtResource("1_oq5cr")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1650530898]
+scale = Vector2(2, 2)
+texture = ExtResource("1_g2tbl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1650738373]
+shape = SubResource("RectangleShape2D_oq5cr")

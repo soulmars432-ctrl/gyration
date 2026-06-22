@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://5xkcfa1k8kik"]
+
+[ext_resource type="Script" uid="uid://cly0m5smx03ax" path="res://boulder.gd" id="1_dicgi"]
+[ext_resource type="Texture2D" uid="uid://cy2vu8k51f2fu" path="res://Wall assets/Boulder.png" id="2_dicgi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dicgi"]
+size = Vector2(59, 8)
+
+[node name="boulder" type="Area2D" unique_id=963625504]
+script = ExtResource("1_dicgi")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1211532347]
+scale = Vector2(2, 2)
+texture = ExtResource("2_dicgi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2082854699]
+position = Vector2(-0.5, 28)
+shape = SubResource("RectangleShape2D_dicgi")
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=1201805721]
+target_position = Vector2(0, 2000)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,72 @@
+[gd_scene format=4 uid="uid://bi34mtqsuurf6"]
+
+[ext_resource type="Script" uid="uid://d2b3eynsy4i8r" path="res://level.gd" id="1_c3c61"]
+[ext_resource type="PackedScene" uid="uid://bso6va85ujjyl" path="res://button.tscn" id="2_e5jh0"]
+[ext_resource type="PackedScene" uid="uid://cv47100gc1b0q" path="res://door.tscn" id="3_5mfaa"]
+[ext_resource type="Texture2D" uid="uid://wiyf746vrajn" path="res://Wall assets/Wall assets.png" id="4_xxyub"]
+[ext_resource type="PackedScene" uid="uid://dw0jslvmikcd6" path="res://box.tscn" id="5_7eokq"]
+[ext_resource type="PackedScene" uid="uid://bn06itk8icyda" path="res://player.tscn" id="6_qdt5h"]
+[ext_resource type="PackedScene" uid="uid://b73v30kl6rtw" path="res://goal.tscn" id="7_1qnog"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_snvwx"]
+texture = ExtResource("4_xxyub")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[sub_resource type="TileSet" id="TileSet_qluxc"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_snvwx")
+
+[node name="Node2D" type="Node2D" unique_id=6914331]
+
+[node name="Level" type="Node2D" parent="." unique_id=541424290]
+position = Vector2(576, 320)
+script = ExtResource("1_c3c61")
+
+[node name="Area2D" parent="Level" unique_id=1820447235 node_paths=PackedStringArray("door") instance=ExtResource("2_e5jh0")]
+position = Vector2(-224, 32)
+door = NodePath("../door")
+
+[node name="door" parent="Level" unique_id=81660422 instance=ExtResource("3_5mfaa")]
+position = Vector2(96, 224)
+
+[node name="wall" type="TileMapLayer" parent="Level" unique_id=91596749]
+position = Vector2(-448, -320)
+scale = Vector2(2, 2)
+tile_map_data = PackedByteArray("AAACAAIAAAAAAAAAAAACAAMAAAAAAAAAAAACAAQAAAAAAAAAAAACAAUAAAAAAAAAAAACAAYAAAAAAAAAAAACAAcAAAAAAAAAAAACAAgAAAAAAAAAAAACAAEAAAAAAAAAAAADAAAAAAABAAAAAAAGAAAAAAABAAAAAAAHAAAAAAABAAAAAAAIAAAAAAABAAAAAAAJAAAAAAABAAAAAAAKAAAAAAABAAAAAAALAAEAAAACAAAAAAALAAIAAAACAAAAAAALAAMAAAACAAAAAAALAAQAAAACAAAAAAALAAUAAAACAAAAAAALAAgAAAACAAAAAAADAAkAAAAAAAEAAAAGAAkAAAAAAAEAAAAHAAkAAAAAAAEAAAAIAAkAAAAAAAEAAAAJAAkAAAAAAAEAAAAKAAkAAAAAAAEAAAAEAAEAAAACAAAAAAAEAAIAAAACAAAAAAAFAAIAAAAAAAAAAAAFAAEAAAAAAAAAAAAEAAgAAAACAAAAAAAEAAcAAAACAAAAAAAEAAYAAAABAAEAAAAFAAYAAAABAAIAAAAFAAgAAAAAAAAAAAAFAAcAAAAAAAAAAAAIAAYAAAABAAEAAAAJAAYAAAAAAAEAAAAKAAYAAAAAAAEAAAAJAAcAAAABAAAAAAAKAAcAAAABAAAAAAAIAAcAAAAAAAIAAAAEAAMAAAAAAAIAAAAFAAMAAAACAAEAAAA=")
+tile_set = SubResource("TileSet_qluxc")
+
+[node name="box" parent="Level" unique_id=405040134 instance=ExtResource("5_7eokq")]
+position = Vector2(96, -168)
+
+[node name="player" parent="Level" unique_id=105112366 instance=ExtResource("6_qdt5h")]
+position = Vector2(-224, -224)
+
+[node name="goal" parent="Level" unique_id=1607375825 instance=ExtResource("7_1qnog")]
+position = Vector2(232, 232)
+next_level = "res://boulder.tscn"
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=34048882]
+offset_left = 32.0
+offset_top = 32.0
+offset_right = 88.0
+offset_bottom = 88.0
+max_value = 0.75
+value = 0.35
+show_percentage = false
