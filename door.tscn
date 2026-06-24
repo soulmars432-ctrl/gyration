@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://cv47100gc1b0q"]
 
 [ext_resource type="Script" uid="uid://bl4ywv7or0j0f" path="res://door.gd" id="1_0phs7"]
-[ext_resource type="Texture2D" uid="uid://jfmfbr2nrsch" path="res://Door/sprite_0.png" id="1_v6xrn"]
-[ext_resource type="Texture2D" uid="uid://bm3crsy8youmx" path="res://Door/sprite_1.png" id="2_0phs7"]
+[ext_resource type="Texture2D" uid="uid://jfmfbr2nrsch" path="res://assets/Door/sprite_0.png" id="1_v6xrn"]
+[ext_resource type="Texture2D" uid="uid://bm3crsy8youmx" path="res://assets/Door/sprite_1.png" id="2_0phs7"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_50cdl"]
 animations = [{

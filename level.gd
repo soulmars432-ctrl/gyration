@@ -22,16 +22,17 @@ func _process(delta: float) -> void:
 		player.in_rotation = true
 	if timer.time_left == 0 and !player.is_sliding:
 		
-		
+		var tween = get_tree().create_tween()
+		tween.stop()
 		if Input.is_action_just_pressed("ui_left"):
-			var tween = get_tree().create_tween()
-			tween.tween_property(self, "rotation_degrees", rotation_degrees-90, 0.75)
 			
+			tween.tween_property(self, "rotation_degrees", rotation_degrees-90, 0.75)
+			tween.play()
 			timer = get_tree().create_timer(cooldown)
 		if Input.is_action_just_pressed("ui_right"):
-			var tween = get_tree().create_tween()
-			tween.tween_property(self, "rotation_degrees", rotation_degrees+90, 0.75)
 			
+			tween.tween_property(self, "rotation_degrees", rotation_degrees+90, 0.75)
+			tween.play()
 			timer = get_tree().create_timer(cooldown)
 	
 		

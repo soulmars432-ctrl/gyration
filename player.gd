@@ -6,20 +6,27 @@ const SPEED = 900.0
 var slide_direction: Vector2 = Vector2.ZERO
 var is_sliding: bool = false
 var in_rotation: bool = false
+@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
+
 
 func _physics_process(delta: float) -> void:
 	# Only accept new input when not already sliding
 	if not is_sliding and !in_rotation:
 		var input = Vector2.ZERO
+		sprite.stop()
 		
 		if Input.is_action_just_pressed("d"):
 			input = Vector2.RIGHT
+			sprite.play("right")
 		elif Input.is_action_just_pressed("a"):
 			input = Vector2.LEFT
+			sprite.play("left")
 		elif Input.is_action_just_pressed("s"):
 			input = Vector2.DOWN
+			sprite.play("down")
 		elif Input.is_action_just_pressed("w"):
 			input = Vector2.UP
+			sprite.play("up")
 		
 		if input != Vector2.ZERO:
 			slide_direction = input

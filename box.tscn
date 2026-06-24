@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dw0jslvmikcd6"]
 
-[ext_resource type="Texture2D" uid="uid://cy2vu8k51f2fu" path="res://Wall assets/Boulder.png" id="1_g2tbl"]
+[ext_resource type="Texture2D" uid="uid://cy2vu8k51f2fu" path="res://assets/Wall assets/Boulder.png" id="1_g2tbl"]
 [ext_resource type="Script" uid="uid://dhqt4oib0dfkv" path="res://box.gd" id="1_oq5cr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oq5cr"]
