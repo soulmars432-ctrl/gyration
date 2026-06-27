@@ -85,7 +85,7 @@ offset_bottom = 440.0
 scale = Vector2(1.3593127, 1.4650093)
 icon = ExtResource("4_3xoar")
 script = ExtResource("5_mom7w")
-scene = "res://control.tscn"
+scene = "res://menu.tscn"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1875377769]
 position = Vector2(568, 312)

@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bso6va85ujjyl" path="res://button.tscn" id="2_1r778"]
 [ext_resource type="PackedScene" uid="uid://dw0jslvmikcd6" path="res://box.tscn" id="3_113jv"]
 [ext_resource type="PackedScene" uid="uid://bn06itk8icyda" path="res://player.tscn" id="4_lwlv8"]
+[ext_resource type="PackedScene" uid="uid://baumb8vvdtlp0" path="res://restart.tscn" id="5_lwlv8"]
 [ext_resource type="PackedScene" uid="uid://b73v30kl6rtw" path="res://goal.tscn" id="5_ty73x"]
 [ext_resource type="Texture2D" uid="uid://de8p4gnbvb4un" path="res://assets/Wall assets/monochrome_tilemap_packed (1).png" id="6_vxrav"]
 [ext_resource type="Texture2D" uid="uid://cgdpi2u87o8le" path="res://assets/tilemap2.png" id="7_1r778"]
@@ -137,5 +138,11 @@ show_percentage = false
 position = Vector2(32.00001, 32.000023)
 scale = Vector2(3.5, 3.5)
 texture = ExtResource("10_113jv")
+
+[node name="Button" parent="." unique_id=1323596718 instance=ExtResource("5_lwlv8")]
+offset_left = 1034.0
+offset_top = 36.00003
+offset_right = 1058.0
+offset_bottom = 60.00003
 
 [editable path="Level/player"]

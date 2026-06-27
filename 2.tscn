@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bn06itk8icyda" path="res://player.tscn" id="6_qdt5h"]
 [ext_resource type="PackedScene" uid="uid://b73v30kl6rtw" path="res://goal.tscn" id="7_1qnog"]
 [ext_resource type="Texture2D" uid="uid://de8p4gnbvb4un" path="res://assets/Wall assets/monochrome_tilemap_packed (1).png" id="7_c3c61"]
+[ext_resource type="PackedScene" uid="uid://baumb8vvdtlp0" path="res://restart.tscn" id="7_e5jh0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_133ip"]
 texture = ExtResource("7_c3c61")
@@ -80,3 +81,9 @@ show_percentage = false
 position = Vector2(32.00001, 32.000023)
 scale = Vector2(3.5, 3.5)
 texture = ExtResource("6_5iwlv")
+
+[node name="Button" parent="." unique_id=1323596718 instance=ExtResource("7_e5jh0")]
+offset_left = 1042.0
+offset_top = 31.0
+offset_right = 1066.0
+offset_bottom = 55.0

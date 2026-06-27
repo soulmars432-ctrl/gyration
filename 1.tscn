@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dj7wnrp8pp8ed" path="res://assets/tutorial2.png" id="7_e348n"]
 [ext_resource type="PackedScene" uid="uid://b73v30kl6rtw" path="res://goal.tscn" id="7_sj4ut"]
 [ext_resource type="Texture2D" uid="uid://co32bbxg16rgu" path="res://assets/icons/sprite_1.png" id="8_e348n"]
+[ext_resource type="PackedScene" uid="uid://baumb8vvdtlp0" path="res://restart.tscn" id="9_cckd2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sj4ut"]
 texture = ExtResource("4_sj4ut")
@@ -90,3 +91,9 @@ show_percentage = false
 position = Vector2(32.00001, 32.000023)
 scale = Vector2(3.5, 3.5)
 texture = ExtResource("8_e348n")
+
+[node name="Button" parent="." unique_id=1323596718 instance=ExtResource("9_cckd2")]
+offset_left = 1041.0
+offset_top = 32.000015
+offset_right = 1065.0
+offset_bottom = 56.000015
