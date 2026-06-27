@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://iybo6oo4x15t" path="res://assets/tutorial1.png" id="6_sj4ut"]
 [ext_resource type="Texture2D" uid="uid://dj7wnrp8pp8ed" path="res://assets/tutorial2.png" id="7_e348n"]
 [ext_resource type="PackedScene" uid="uid://b73v30kl6rtw" path="res://goal.tscn" id="7_sj4ut"]
+[ext_resource type="Texture2D" uid="uid://co32bbxg16rgu" path="res://assets/icons/sprite_1.png" id="8_e348n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sj4ut"]
 texture = ExtResource("4_sj4ut")
@@ -84,3 +85,8 @@ offset_bottom = 88.0
 max_value = 0.75
 value = 0.35
 show_percentage = false
+
+[node name="Sprite1" type="Sprite2D" parent="ProgressBar" unique_id=1139179210]
+position = Vector2(32.00001, 32.000023)
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("8_e348n")

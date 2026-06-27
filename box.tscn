@@ -10,8 +10,8 @@ size = Vector2(62, 62)
 slide_on_ceiling = false
 floor_stop_on_slope = false
 floor_block_on_wall = false
+floor_snap_length = 0.0
 platform_floor_layers = 1
-safe_margin = 2.0
 script = ExtResource("1_oq5cr")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1650530898]

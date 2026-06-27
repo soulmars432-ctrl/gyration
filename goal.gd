@@ -11,4 +11,5 @@ func _on_body_entered(body: Node2D) -> void:
 		print("not quite")
 		if not player.in_rotation:
 			print("yes tp")
-			get_tree().change_scene_to_file(next_level)
+			Lvlsfinished.lvls_unclocked.append(next_level)
+			get_tree().change_scene_to_file("res://control.tscn")

@@ -9,8 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://cgdpi2u87o8le" path="res://assets/tilemap2.png" id="7_1r778"]
 [ext_resource type="PackedScene" uid="uid://cv47100gc1b0q" path="res://door.tscn" id="7_5fc0k"]
 [ext_resource type="Texture2D" uid="uid://db1je3lm2bucm" path="res://assets/tutorial3.png" id="8_qy8ru"]
+[ext_resource type="Texture2D" uid="uid://co32bbxg16rgu" path="res://assets/icons/sprite_1.png" id="10_113jv"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c3c61"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1r778"]
 texture = ExtResource("6_vxrav")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -58,8 +59,11 @@ texture = ExtResource("7_1r778")
 
 [sub_resource type="TileSet" id="TileSet_5mfaa"]
 physics_layer_0/collision_layer = 1
-sources/1 = SubResource("TileSetAtlasSource_c3c61")
+sources/1 = SubResource("TileSetAtlasSource_1r778")
 sources/2 = SubResource("TileSetAtlasSource_113jv")
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_113jv"]
+friction = 0.0
 
 [node name="Node2D" type="Node2D" unique_id=6914331]
 
@@ -82,14 +86,18 @@ door = NodePath("../door")
 
 [node name="box" parent="Level" unique_id=405040134 instance=ExtResource("3_113jv")]
 position = Vector2(224, -224)
+safe_margin = 1.5
 
 [node name="player" parent="Level" unique_id=105112366 instance=ExtResource("4_lwlv8")]
-position = Vector2(232, 232)
-safe_margin = 2.0
+position = Vector2(224, 224)
+safe_margin = 1.8
+
+[node name="CollisionShape2D" parent="Level/player" index="0" unique_id=397046586]
+position = Vector2(0, 1.75)
 
 [node name="goal" parent="Level" unique_id=1607375825 instance=ExtResource("5_ty73x")]
 position = Vector2(-160, 224)
-next_level = "res://1.tscn"
+next_level = "res://title.tscn"
 
 [node name="wall" type="TileMapLayer" parent="Level" unique_id=1283734445]
 position = Vector2(-448, -320)
@@ -104,6 +112,7 @@ zoom = Vector2(0.65, 0.65)
 [node name="door" parent="Level" unique_id=667392617 instance=ExtResource("7_5fc0k")]
 modulate = Color(0.95434266, 0.6906012, 0.76320153, 1)
 position = Vector2(-159, 97)
+physics_material_override = SubResource("PhysicsMaterial_113jv")
 
 [node name="Tutorial3" type="Sprite2D" parent="Level" unique_id=695839352]
 modulate = Color(1, 1, 1, 0.078431375)
@@ -115,7 +124,7 @@ texture = ExtResource("8_qy8ru")
 [node name="door2" parent="Level" unique_id=1191553702 instance=ExtResource("7_5fc0k")]
 position = Vector2(-160, -96)
 
-[node name="ProgressBar" type="ProgressBar" parent="." unique_id=34048882]
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=1150830978]
 offset_left = 32.0
 offset_top = 32.0
 offset_right = 88.0
@@ -123,3 +132,10 @@ offset_bottom = 88.0
 max_value = 0.75
 value = 0.35
 show_percentage = false
+
+[node name="Sprite1" type="Sprite2D" parent="ProgressBar" unique_id=1979165466]
+position = Vector2(32.00001, 32.000023)
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("10_113jv")
+
+[editable path="Level/player"]
