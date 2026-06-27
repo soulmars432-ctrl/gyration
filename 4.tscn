@@ -93,7 +93,7 @@ position = Vector2(224, 224)
 safe_margin = 1.8
 
 [node name="CollisionShape2D" parent="Level/player" index="0" unique_id=397046586]
-position = Vector2(0, 1.75)
+position = Vector2(0, 1)
 
 [node name="goal" parent="Level" unique_id=1607375825 instance=ExtResource("5_ty73x")]
 position = Vector2(-160, 224)
