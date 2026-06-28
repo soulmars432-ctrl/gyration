@@ -11,15 +11,20 @@ func _on_body_entered(body: Node2D) -> void:
 
 	Lvlsfinished.lvls_unclocked.append(next_level)
 	get_tree().paused = true
+	SceneTransition.transition()
+	#await SceneTransition.on_transition_finished
+	
 	next.play()
 
 
 	var sound_length: float = 0.0
-	SceneTransition.transition()
+	
 	
 	if next.stream != null:
 		sound_length = next.stream.get_length()
 	await get_tree().create_timer(sound_length).timeout
-
+	
+	
 	get_tree().paused = false
+	
 	get_tree().change_scene_to_file("res://menu.tscn")
