@@ -102,6 +102,8 @@ offset_bottom = 48.0
 
 [node name="creeking_sound" type="AudioStreamPlayer" parent="." unique_id=897965936]
 stream = ExtResource("11_g1wnw")
+volume_db = -20.0
 
 [node name="reset_sound" type="AudioStreamPlayer" parent="." unique_id=599959162]
 stream = ExtResource("12_yk1mh")
+volume_db = -20.0

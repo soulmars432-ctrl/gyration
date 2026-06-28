@@ -11,14 +11,16 @@ var slide_direction: Vector2 = Vector2.ZERO
 
 var is_sliding:bool = false
 var in_rotation:bool = false
+@onready var dash_particles: GPUParticles2D = $dash_particles
 
 
 func _physics_process(delta: float) -> void:
 	# Keep the player oriented with the dash direction while the level rotates.
-
+	
 	# Only accept new input when not already sliding
 	if not is_sliding and not in_rotation:
 		var input = Vector2.ZERO
+		dash_particles.emitting = false
 
 		if Input.is_action_just_pressed("d"):
 			input = Vector2.RIGHT
@@ -35,6 +37,7 @@ func _physics_process(delta: float) -> void:
 			is_sliding = true
 			
 	if is_sliding:
+		dash_particles.emitting = true
 		velocity = slide_direction * SPEED
 		move_and_slide()
 

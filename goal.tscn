@@ -20,5 +20,6 @@ shape = SubResource("RectangleShape2D_0qle8")
 
 [node name="next" type="AudioStreamPlayer" parent="." unique_id=1804372669]
 stream = ExtResource("3_p20yd")
+volume_db = -30.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

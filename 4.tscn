@@ -95,7 +95,7 @@ safe_margin = 1.5
 position = Vector2(224, 224)
 safe_margin = 1.8
 
-[node name="CollisionShape2D" parent="Level/player" index="0" unique_id=397046586]
+[node name="CollisionShape2D" parent="Level/player" index="1" unique_id=397046586]
 position = Vector2(0, 1)
 
 [node name="goal" parent="Level" unique_id=1607375825 instance=ExtResource("5_ty73x")]
@@ -149,8 +149,10 @@ offset_bottom = 60.00003
 
 [node name="creeking_sound" type="AudioStreamPlayer" parent="." unique_id=1203459531]
 stream = ExtResource("12_vxrav")
+volume_db = -20.0
 
 [node name="reset_sound" type="AudioStreamPlayer" parent="." unique_id=94014237]
 stream = ExtResource("13_5fc0k")
+volume_db = -20.0
 
 [editable path="Level/player"]

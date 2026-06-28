@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 Lvlsfinished="*uid://i24h4big5fjt"
+SceneTransition="*uid://c1wn182q2oqkn"
 
 [display]
 
